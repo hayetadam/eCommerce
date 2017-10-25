@@ -7,6 +7,12 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { NewUserComponent } from './new-user/new-user.component';
 import { UserService } from './shared/user.service';
+import { ProductService } from './shared/product.service';
+import { BrandService } from './shared/brand.service';
+import { CategoryService } from './shared/category.service';
+import { RouterModule } from '@angular/router';
+import { appRoutes } from './app.routes';
+
 
 @NgModule({
   declarations: [
@@ -17,10 +23,17 @@ import { UserService } from './shared/user.service';
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule 
+    FormsModule,
+    RouterModule.forRoot(appRoutes),
+
+
   ],
   providers: [
     UserService,
+    ProductService,
+    BrandService,
+    CategoryService,
+
   ],
   bootstrap: [AppComponent]
 })

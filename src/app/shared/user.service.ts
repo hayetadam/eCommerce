@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { User } from "./user";
 import { Observable } from "rxjs/Observable";
+import { User } from "./User";
 
 @Injectable()
 export class UserService {
@@ -15,7 +15,7 @@ export class UserService {
 ajouterUser(user): Observable<User[]>{
   
   return this.http.post<User[]>(this.urlApi, user); 
-;
+
 }
 
 }

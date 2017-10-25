@@ -6,13 +6,14 @@
     <label for="email">Email: </label>
     <input type="text" name="email" [(ngModel)]="email">
     <label for="mdp">Mot de passe: </label>
-    <input type="mdp" name="mdp" [(ngModel)]="mdp">
+    <input type="password" name="mdp" [(ngModel)]="mdp">
     <button type="submit" (click)="ajouterUser(pseudo, email, mdp)">submit</button>
 
 </form>
 
 <li *ngFor="let item of tableau; index as clef">
-
     {{item.email}} {{item.pseudo}}
-    <button>Supprimer</button>
+
+    <!--<button>Supprimer</button>-->
+
 </li>
