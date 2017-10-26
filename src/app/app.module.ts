@@ -12,13 +12,19 @@ import { BrandService } from './shared/brand.service';
 import { CategoryService } from './shared/category.service';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './app.routes';
+import { NewProductComponent } from './new-product/new-product.component';
+import { NewBrandComponent } from './new-brand/new-brand.component';
+import { NewCategoryComponent } from './new-category/new-category.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    NewUserComponent
+    NewUserComponent,
+    NewProductComponent,
+    NewBrandComponent,
+    NewCategoryComponent
   ],
   imports: [
     BrowserModule,
