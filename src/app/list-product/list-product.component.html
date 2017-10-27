@@ -1,0 +1,36 @@
+<h1>
+    La liste des produits</h1>
+
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nom</th>
+            <th>Reference</th>
+            <th>Description</th>
+            <th>pris</th>
+            <th>Modifier</th>
+            <th>Supprimer</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of listProduct">
+            <td>{{product.id}}</td>
+            <td>
+                <a [routerLink]="[ '/product', product.id]">{{item.name}}</a>
+            </td>
+            <td>{{product.Description}}</td>
+            <td>{{product.prix}}</td>
+            <td>
+                <button (click)="aModifier = product">Modifer</button>
+            </td>
+            <td>
+                <button (click)="supprimer(product.id)">X</button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
+
+<app-modifier-product *ngIf="aModifier" [product]="aModifier" (onSave)="modifier($event)"></app-modifier-product>

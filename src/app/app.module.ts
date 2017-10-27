@@ -15,6 +15,9 @@ import { appRoutes } from './app.routes';
 import { NewProductComponent } from './new-product/new-product.component';
 import { NewBrandComponent } from './new-brand/new-brand.component';
 import { NewCategoryComponent } from './new-category/new-category.component';
+import { ListProductComponent } from './list-product/list-product.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ModifierProductComponent } from './modifier-product/modifier-product.component';
 
 
 @NgModule({
@@ -24,7 +27,10 @@ import { NewCategoryComponent } from './new-category/new-category.component';
     NewUserComponent,
     NewProductComponent,
     NewBrandComponent,
-    NewCategoryComponent
+    NewCategoryComponent,
+    ListProductComponent,
+    PageNotFoundComponent,
+    ModifierProductComponent
   ],
   imports: [
     BrowserModule,

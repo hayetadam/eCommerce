@@ -1,3 +1,11 @@
-<p>
-  new-category works!
-</p>
+<form>
+    <h1>New category</h1>
+    <label>Nom</label>
+    <input type="text" name="name" [(ngModel)]="name">
+    <button (click)="ajouterCategory(name)">Ajouter</button>
+</form>
+
+<li *ngFor="let item of liste; index as clef">
+    {{item.name}}
+    <button>Supprimer</button>
+</li>
